@@ -1,0 +1,40 @@
+<head>
+  <title>hyperclock</title>
+</head>
+
+<body>
+  {{> hyperclock}}
+</body>
+
+<template name="hyperclock">
+  <div class="hyperclock">
+    {{> people}}
+    {{> startStop}}
+    {{> time}}
+  </div>
+</template>
+
+<template name="people">
+  <div>How many people? <input data-element="people" type="number" value="{{people}}" /></div>
+</template>
+
+<template name="startStop">
+  <div data-element="start_stop" class="button">{{antiState}}</div>
+</template>
+
+<template name="time">
+  <div class="time">{{hyperclock}}</div>
+  <div class="units">{{units}}</div>
+</template>
+
+
+<template name="index">
+  <h1>Hyperclocks</h1>
+  {{#each}}
+    {{> hyperclock_instance}}
+  {{/each}}
+</template>
+
+<template name="hyperclock_instance">
+  Clock
+</template>

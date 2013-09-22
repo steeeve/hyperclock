@@ -1,0 +1,51 @@
+/* CSS declarations go here */
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+input {
+  border: 0;
+  background: none;
+  outline: none;
+}
+
+.hyperclock {
+  font-size: 5em;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+}
+
+.hyperclock .units {
+  font-size: 0.612em;
+}
+
+.hyperclock .time {
+  font-size: 2em;
+}
+
+.hyperclock input {
+  margin: -5px;
+  font-size: 1em;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  width: 200px;
+  border-bottom: 5px solid hsl(0, 0%, 0%);
+  text-align: right;
+}
+
+.button {
+  background: hsl(0, 0%, 0%);
+  color: hsl(0, 100%, 100%);
+  display: inline-block;
+  cursor: pointer;
+  padding: 0 0.25em;
+}
