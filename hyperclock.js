@@ -70,7 +70,7 @@ Hyperclock.prototype = {
   time: function() {
     return this.get("hypercounts").reduce(function (mem, count) {
       return (count.people * count.duration) + mem;
-    }, 0) / 60000;
+    }, 0) / (60 * 60 * 1000);
   },
 
   tick: function() {
@@ -110,13 +110,13 @@ if (Meteor.isClient) {
   Template.time.hyperclock = function () {
     var time = hyperclock.time();
 
-    return time > 0 ? time.toFixed(1) : "";
+    return time > 0 ? time.toFixed(2) : "";
   };
 
   Template.time.units = function () {
     var time = hyperclock.time();
 
-    return time > 0 ? "mins" : "";
+    return time > 0 ? "hrs" : "";
   };
 
 }
