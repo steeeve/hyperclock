@@ -1,0 +1,45 @@
+<head>
+  <title>hyperclock</title>
+  <meta name="viewport" content="width=device-width" />
+</head>
+
+<body>
+  {{> hyperclockControl}}
+  {{> hyperclocks}}
+</body>
+
+<template name="hyperclocks">
+  <div class="hyperclocks">
+    {{#each hyperclock}}
+      {{> hyperclock}}
+    {{/each}}
+  </div>
+</template>
+
+<template name="hyperclock">
+  <div class="hyperclock">
+    {{people}} started a meeting {{ago}} for {{hypertime}}
+  </div>
+</template>
+
+<template name="hyperclockControl">
+  <div class="hyperclock-control">
+    {{> peopleControl}}
+    {{> startStopControl}}
+    {{> timeControl}}
+  </div>
+</template>
+
+<template name="peopleControl">
+  <div>How many people? <input data-element="people" type="number" value="{{people}}" /></div>
+</template>
+
+<template name="startStopControl">
+  <div data-element="start_stop" class="button">{{antiState}}</div>
+</template>
+
+<template name="timeControl">
+  <div class="time">{{hyperclock}}</div>
+  <div class="units">{{units}}</div>
+</template>
+

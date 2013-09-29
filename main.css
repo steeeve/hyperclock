@@ -19,26 +19,26 @@ input {
   outline: none;
 }
 
-.hyperclock {
+.hyperclock-control {
   font-size: 3.5em;
   text-transform: uppercase;
   letter-spacing: -0.05em;
 }
 
 @media all and (min-width: 500px) {
-  .hyperclock {
+  .hyperclock-control {
     font-size: 5em;
   }
 }
-.hyperclock .units {
+.hyperclock-control .units {
   font-size: 0.612em;
 }
 
-.hyperclock .time {
+.hyperclock-control .time {
   font-size: 2em;
 }
 
-.hyperclock input {
+.hyperclock-control input {
   margin: -5px;
   font-size: 1em;
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
@@ -54,4 +54,17 @@ input {
   cursor: pointer;
   padding: 0 0.25em;
   margin: 0.25em;
+}
+
+.hyperclock {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 1em 0;
+  color: hsl(0, 0%, 50%);
+}
+
+.hyperclocks {
+  display: inline-block;
+  margin: 2em 0 0 0;
+  padding: 1em;
+  border-top: 5px solid hsl(0, 0%, 90%);
 }
